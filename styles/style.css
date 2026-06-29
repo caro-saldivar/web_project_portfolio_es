@@ -15,3 +15,12 @@
 body {
   background-color: burlywood;
 }
+
+h1 {
+  font-family: "ArchivoBlack", "Arial", sans-serif;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 72px;
+  leading-trim: NONE;
+  line-height: 100%;
+}
