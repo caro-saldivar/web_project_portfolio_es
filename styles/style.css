@@ -21,10 +21,12 @@ body {
   font-weight: 400;
   font-style: Regular;
   font-size: 18px;
-  /* margin-left: 120px;
-  margin-right: 120px; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
 }
 
 h1 {
@@ -51,16 +53,15 @@ section {
 }
 
 .header {
-  width: 100%;
+  width: 793px;
   padding-top: 89px;
-  position: relative;
   margin-left: 120px;
   margin-right: 120px;
 }
 
 .header__name {
   margin: 0;
-  width: 793px;
+  width: 100%;
   padding-bottom: 15px;
 }
 
@@ -68,11 +69,11 @@ section {
   margin: 0;
   color: #ffffff80;
   padding-bottom: 30px;
-  width: 793px;
+  width: 100%;
 }
 
 .header__description {
-  width: 793px;
+  width: 100%;
   margin: 0;
   padding-bottom: 30px;
   font-size: 18px;
@@ -85,7 +86,7 @@ section {
   object-fit: cover;
   position: absolute;
   top: 40px;
-  right: 240px;
+  right: 120px;
 }
 
 .header__nav-links {
@@ -96,8 +97,7 @@ section {
   gap: 30px;
   padding: 0;
   list-style: none;
-  width: 793px;
-  /* padding-bottom: 120px; es sumando el grosor de la línea azul*/
+  width: 100%;
 }
 
 .header__nav-textandline {
@@ -171,7 +171,7 @@ section {
 }
 
 .project_image {
-  width: 590px;
+  width: 100%;
   height: 330px;
   display: flex;
   flex-direction: row;
@@ -214,7 +214,7 @@ section {
 }
 
 .project_name {
-  width: 590px;
+  width: 100%;
   font-weight: 700;
   font-style: Bold;
   font-size: 24px;
@@ -230,7 +230,7 @@ section {
   font-size: 18px;
   padding: 20px 30px 30px;
   margin: 0;
-  width: 590px;
+  width: 100%;
   box-sizing: border-box;
 }
 
@@ -308,7 +308,7 @@ section {
 
 .circle {
   border-radius: 150px;
-  z-index: 0;
+  z-index: -1;
   width: 700px;
   height: 700px;
 
@@ -335,7 +335,7 @@ section {
   overflow: clip;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1023px) {
   h1 {
     font-size: 58px;
   }
@@ -353,21 +353,19 @@ section {
   .header {
     padding-top: 40px;
     margin-left: 40px;
-    margin-right: 40px;
+    overflow: hidden;
+    width: 452px;
   }
 
   .header__name {
-    width: 434px;
     padding-bottom: 14px;
   }
 
   .header__role {
     padding-bottom: 20px;
-    width: 452px;
   }
 
   .header__description {
-    width: 452px;
     margin: 0;
     padding-bottom: 20px;
   }
@@ -411,28 +409,6 @@ section {
     width: 688px;
   }
 
-  .project_image {
-    width: 688px;
-    height: 330px;
-  }
-
-  .project_image-coffeeshop {
-    background-size: 688px 330px;
-  }
-
-  .project_image-placeholder {
-    background-size: 688px 330px;
-    background-size: cover;
-  }
-
-  .project_name {
-    width: 688px;
-  }
-
-  .project_description {
-    width: 688px;
-  }
-
   .project_links {
     margin-top: 0;
   }
@@ -449,5 +425,173 @@ section {
   .circle_footer {
     top: 1850px;
     left: 34px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  body {
+    margin: 0;
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 28px;
+    margin: 0;
+  }
+
+  main,
+  section {
+    margin: 20px;
+  }
+
+  .header {
+    overflow: hidden;
+    width: 280px;
+    margin-top: 0;
+    margin-left: 20px;
+    padding-top: 20px;
+  }
+
+  .header__image {
+    position: static;
+    width: 100%;
+    height: 280px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+
+  .header__name {
+    padding-bottom: 10px;
+  }
+
+  .header__role {
+    padding-bottom: 20px;
+  }
+
+  .header__description {
+    margin: 0;
+    padding-bottom: 20px;
+  }
+
+  .header__nav-links {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .header__nav-lineCV {
+    margin-bottom: 25px;
+  }
+
+  .header__nav-lineGH {
+    margin-bottom: 25px;
+  }
+
+  .header__nav-lineTlk {
+    margin-bottom: 25px;
+  }
+
+  .main__logos {
+    padding-top: 30px;
+    padding-bottom: 60px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 30px 53px;
+  }
+
+  .main__logo-rectangle {
+    width: 30px;
+    height: 34.2px;
+  }
+
+  .main__logo-square {
+    width: 30px;
+    height: 30px;
+  }
+
+  .main__projects {
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-rows: auto;
+    gap: 20px;
+  }
+
+  .project {
+    width: 280px;
+    margin-top: 10px;
+  }
+
+  .project_image {
+    width: 100%;
+    height: 160px;
+  }
+
+  .project_image-coffeeshop {
+    background-size: 280px 160px;
+  }
+
+  .project__logos {
+    padding-left: 10px;
+    padding-bottom: 10px;
+  }
+
+  .project__logo-rectangle {
+    width: 17.56px;
+    height: 20px;
+    padding-right: 5px;
+  }
+
+  .project__logo-square {
+    width: 20px;
+    height: 20px;
+    padding-right: 5px;
+  }
+
+  .project_name {
+    font-size: 20px;
+    padding-top: 20px;
+    padding-left: 20px;
+  }
+
+  .project_description {
+    font-size: 16px;
+    padding: 10px 20px 20px;
+  }
+
+  .project_links {
+    margin-top: 0;
+    padding-left: 20px;
+    padding-bottom: 20px;
+  }
+
+  .footer {
+    height: 100%;
+  }
+
+  .footer_title {
+    padding-top: 80px;
+  }
+
+  .footer_social-media_logo {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .circle {
+    display: none;
+  }
+  .circle_header {
+    top: -200px;
+    right: calc(100% / 2);
+  }
+
+  .circle_footer {
+    top: 2296px;
+    left: 0;
   }
 }
