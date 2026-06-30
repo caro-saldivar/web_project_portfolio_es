@@ -13,6 +13,7 @@
 }
 
 body {
+  margin: 0;
   width: 100vw;
   background-color: #111111;
   color: #ffffff;
@@ -20,8 +21,8 @@ body {
   font-weight: 400;
   font-style: Regular;
   font-size: 18px;
-  margin-left: 120px;
-  margin-right: 120px;
+  /* margin-left: 120px;
+  margin-right: 120px; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -43,10 +44,18 @@ h2 {
   margin: 0;
 }
 
+main,
+section {
+  margin-left: 120px;
+  margin-right: 120px;
+}
+
 .header {
   width: 100%;
   padding-top: 89px;
   position: relative;
+  margin-left: 120px;
+  margin-right: 120px;
 }
 
 .header__name {
@@ -66,6 +75,7 @@ h2 {
   width: 793px;
   margin: 0;
   padding-bottom: 30px;
+  font-size: 18px;
 }
 
 .header__image {
@@ -75,11 +85,12 @@ h2 {
   object-fit: cover;
   position: absolute;
   top: 40px;
-  right: 120px;
+  right: 240px;
 }
 
 .header__nav-links {
   margin: 0;
+  margin-right: 120px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -105,7 +116,6 @@ h2 {
 } */
 
 .main__logos {
-  width: 100vw;
   padding-top: 50px;
   padding-bottom: 100px;
   display: flex;
@@ -124,11 +134,10 @@ h2 {
 }
 
 .main__projects {
+  margin: 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(590px, 1fr));
-  grid-auto-flow: column;
   gap: 20px;
-  box-sizing: border-box;
   grid-template-rows: 670px;
 }
 
@@ -242,4 +251,65 @@ h2 {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 343px;
+  overflow: clip;
+}
+
+.footer_title {
+  padding-top: 100px;
+}
+
+.footer_email {
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  font-size: 18px;
+  color: #6d6dff;
+}
+
+.footer_social-media {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+.footer_social-media_logo {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.circle {
+  border-radius: 150px;
+  z-index: 0;
+  width: 700px;
+  height: 700px;
+
+  background: radial-gradient(
+    circle,
+    rgba(109, 109, 255, 0.45) 0%,
+    rgba(109, 109, 255, 0.2) 35%,
+    rgba(109, 109, 255, 0.08) 65%,
+    transparent 100%
+  );
+}
+
+.circle_header {
+  position: absolute;
+  top: 40px;
+  right: 127px;
+}
+
+.circle_footer {
+  position: absolute;
+  top: 1375px;
+  left: 370px;
+  z-index: -1;
+  overflow: clip;
 }
