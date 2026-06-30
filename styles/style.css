@@ -183,7 +183,6 @@ section {
     linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%),
     url(../images/Café\ de\ especialidad\ en\ Triple\ Espresso.png);
   aspect-ratio: 16:9;
-  background-repeat: no-repeat;
   background-size: cover;
 }
 
@@ -194,7 +193,6 @@ section {
   aspect-ratio: 16:9;
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
 }
 
 .project__logos {
@@ -458,7 +456,7 @@ section {
 
   main,
   section {
-    margin: 20px;
+    margin: 0 20px;
   }
 
   .header {
@@ -488,6 +486,10 @@ section {
   .header__description {
     margin: 0;
     padding-bottom: 20px;
+  }
+
+  .header__nav{
+    padding-bottom: 35px;
   }
 
   .header__nav-links {
@@ -583,7 +585,7 @@ section {
   }
 
   .footer_title {
-    padding-top: 80px;
+    padding-top: 60px;
   }
 
   .footer_social-media_logo {
