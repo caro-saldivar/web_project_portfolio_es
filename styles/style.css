@@ -76,7 +76,6 @@ h2 {
   position: absolute;
   top: 40px;
   right: 120px;
-  margin-right: 120px;
 }
 
 .header__nav-links {
@@ -106,6 +105,7 @@ h2 {
 } */
 
 .main__logos {
+  width: 100vw;
   padding-top: 50px;
   padding-bottom: 100px;
   display: flex;
@@ -124,12 +124,20 @@ h2 {
 }
 
 .main__projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(590px, 1fr));
+  grid-auto-flow: column;
+  gap: 20px;
+  box-sizing: border-box;
+  grid-template-rows: 670px;
 }
 
 .project {
+  margin-top: 50px;
+  background-color: #4e4e4e;
+  display: flex;
+  flex-direction: column;
   width: 590px;
-  box-sizing: border-box;
-  padding-top: 50px;
 }
 
 .project_image {
@@ -137,44 +145,63 @@ h2 {
   height: 330px;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
   align-items: flex-end;
 }
 
-.project_photo {
-  width: 590px;
-  height: 330px;
-  background-image: cover;
+.project_image-coffeeshop {
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%),
+    url(../images/Café\ de\ especialidad\ en\ Triple\ Espresso.png);
+  background-size: 590px 330px;
+  background-repeat: no-repeat;
+}
+
+.project_image-placeholder {
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%),
+    url(../images/placeholder\ for\ a\ photo.png);
+  background-size: 590px 330px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .project__logos {
+  padding-left: 12px;
+  padding-bottom: 10px;
 }
 
 .project__logo-rectangle {
   width: 35.12px;
   height: 40px;
+  padding-right: 10px;
 }
 
 .project__logo-square {
   width: 40px;
   height: 40px;
+  padding-right: 10px;
 }
 
 .project_name {
+  width: 590px;
   font-weight: 700;
   font-style: Bold;
   font-size: 24px;
   padding-top: 30px;
   padding-left: 30px;
   margin: 0;
+  box-sizing: border-box;
 }
 
 .project_description {
   font-weight: 400;
   font-style: Regular;
   font-size: 18px;
-  padding: 20px 30px 30px 30px;
+  padding: 20px 30px 30px;
   margin: 0;
+  width: 590px;
+  box-sizing: border-box;
 }
 
 .project_links {
@@ -185,6 +212,7 @@ h2 {
   gap: 20px;
   padding-left: 30px;
   padding-bottom: 30px;
+  margin-top: auto;
 }
 
 .project_link-logo {
@@ -194,15 +222,24 @@ h2 {
   margin: 0;
 }
 
+.project_link-logo_Github {
+  opacity: 0.6;
+}
+
 .project_link-demo {
   font-size: 16px;
   color: #6d6dff;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .project_link-GitHub {
-  color: #ffffff99;
-}
-
-.footer_title {
-  padding-top: 100px;
+  font-size: 16px;
+  color: #ffffff60;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
