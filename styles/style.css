@@ -90,7 +90,6 @@ section {
 
 .header__nav-links {
   margin: 0;
-  margin-right: 120px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -98,7 +97,13 @@ section {
   padding: 0;
   list-style: none;
   width: 793px;
-  padding-bottom: 120px; /*es sumando el grosor de la línea azul*/
+  /* padding-bottom: 120px; es sumando el grosor de la línea azul*/
+}
+
+.header__nav-textandline {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .header__nav-link {
@@ -107,13 +112,29 @@ section {
   font-style: SemiBold;
   font-size: 18px;
   text-decoration: none;
+  padding-bottom: 5px;
 }
-/*
-.header__nav-line {
+
+.header__nav-lineCV {
   width: 115px;
   height: 5px;
-  color: aquamarine;
-} */
+  background: linear-gradient(90deg, #ff4500 0%, #ffa500 100%);
+  margin-bottom: 110px;
+}
+
+.header__nav-lineGH {
+  width: 138px;
+  height: 5px;
+  background: linear-gradient(90deg, #ff4500 0%, #ffa500 100%);
+  margin-bottom: 110px;
+}
+
+.header__nav-lineTlk {
+  width: 88px;
+  height: 5px;
+  background: linear-gradient(90deg, #ff4500 0%, #ffa500 100%);
+  margin-bottom: 110px;
+}
 
 .main__logos {
   padding-top: 50px;
@@ -143,7 +164,7 @@ section {
 
 .project {
   margin-top: 50px;
-  background-color: #4e4e4e;
+  background-color: #111;
   display: flex;
   flex-direction: column;
   width: 590px;
@@ -270,7 +291,7 @@ section {
   padding-top: 20px;
   padding-bottom: 30px;
   font-size: 18px;
-  color: #6d6dff;
+  color: #ff8c00;
 }
 
 .footer_social-media {
@@ -293,9 +314,9 @@ section {
 
   background: radial-gradient(
     circle,
-    rgba(109, 109, 255, 0.45) 0%,
-    rgba(109, 109, 255, 0.2) 35%,
-    rgba(109, 109, 255, 0.08) 65%,
+    rgba(255, 69, 0, 0.45) 0%,
+    rgba(255, 140, 0, 0.2) 35%,
+    rgba(255, 165, 0, 0.08) 65%,
     transparent 100%
   );
 }
