@@ -14,6 +14,7 @@
 
 body {
   margin: 0 auto;
+  padding: 0 120px;
   max-width: 1440px;
   background-color: #111111;
   color: #ffffff;
@@ -46,6 +47,8 @@ h2 {
   margin: 0;
 }
 
+/* LO QUE YA SALE Y ESTÁ BONITO */
+/*
 main,
 section {
   margin-left: 120px;
@@ -135,6 +138,114 @@ section {
   background: linear-gradient(90deg, #ff4500 0%, #ffa500 100%);
   margin-bottom: 110px;
 }
+
+*/
+
+/* --- OPCIÓN DE CHATGPT PARA ORGANIZARLO CON FLEXBOX --- */
+
+*{
+   /* margin:0; */
+    padding:0;
+    box-sizing:border-box;
+}
+
+.header {
+    display:grid;
+
+    /* Texto | Imagen */
+    grid-template-columns: 1fr 387px;
+
+    align-items:center;
+    gap:20px;
+
+    max-width:1440px;
+    margin:auto;
+    margin-top: 0;
+
+}
+
+.hero-info{
+    min-width:0;
+}
+
+.header__name{
+  margin-top: 89px;
+  width: 100%;
+  padding-bottom: 15px;
+  paddin-top: 89px;
+}
+
+.header__role {
+margin: 0;
+  color: #ffffff;
+  opacity: 0.8;
+  padding-bottom: 30px;
+  font-size: 18px;
+  }
+
+.header__description {
+  margin: 0;
+  padding-bottom: 30px;
+  font-size: 18px;
+}
+
+.header__nav-links {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 30px;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+}
+
+.header__nav-textandline {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.header__nav-link {
+  color: #ffffff;
+  font-weight: 600;
+  font-style: SemiBold;
+  font-size: 18px;
+  text-decoration: none;
+  padding-bottom: 5px;
+}
+
+.header__nav-lineCV {
+  width: 115px;
+  height: 5px;
+  background: linear-gradient(90deg, #ff4500 0%, #ffa500 100%);
+  margin-bottom: 110px;
+}
+
+.header__nav-lineGH {
+  width: 138px;
+  height: 5px;
+  background: linear-gradient(90deg, #ff4500 0%, #ffa500 100%);
+  margin-bottom: 110px;
+}
+
+.header__nav-lineTlk {
+  width: 88px;
+  height: 5px;
+  background: linear-gradient(90deg, #ff4500 0%, #ffa500 100%);
+  margin-bottom: 110px;
+}
+
+.header__image{
+    width:100%;
+    display:block;
+    height: 500px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+/* ----FIN CHATGPT ---*/
+
 
 .main__logos {
   padding-top: 50px;
@@ -439,7 +550,7 @@ section {
   }
 
   .circle_header {
-    top: 120px;
+    top: 80px;
     right: 80px;
   }
 
