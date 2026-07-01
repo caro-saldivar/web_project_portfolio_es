@@ -33,7 +33,6 @@ body {
 h1 {
   font-family: "ArchivoBlack", "Arial", sans-serif;
   font-weight: 400;
-  font-style: Regular;
   font-size: 72px;
   line-height: 100%;
   margin: 0;
@@ -42,7 +41,6 @@ h1 {
 h2 {
   font-family: "ArchivoBlack", "Arial", sans-serif;
   font-weight: 400;
-  font-style: Regular;
   font-size: 40px;
   margin: 0;
 }
@@ -54,17 +52,12 @@ h2 {
 
 .header {
     display:grid;
-
-    /* Texto | Imagen */
     grid-template-columns: 1fr 387px;
-
     align-items:center;
     gap:20px;
-
     max-width:1440px;
     margin:auto;
     margin-top: 0;
-
 }
 
 .header-info{
@@ -79,7 +72,7 @@ h2 {
 }
 
 .header__role {
-margin: 0;
+  margin: 0;
   color: #ffffff;
   opacity: 0.8;
   padding-bottom: 30px;
@@ -140,9 +133,9 @@ margin: 0;
 }
 
 .header__image{
-    width:100%;
-    display:block;
-    height: 500px;
+  width:100%;
+  display:block;
+  height: 500px;
   aspect-ratio: 1/1;
   object-fit: cover;
 }
@@ -214,7 +207,6 @@ margin: 0;
 .project__logo-rectangle {
   height: 40px;
   padding-right: 10px;
-
 }
 
 .project__logo-square {
@@ -300,7 +292,7 @@ margin: 0;
   padding-top: 20px;
   padding-bottom: 30px;
   font-size: 18px;
-  color: #ff8c00;
+  color: #e55400;
   text-decoration: none;
 }
 
@@ -339,8 +331,7 @@ margin: 0;
 
 .circle_footer {
   position: absolute;
- /* top: 1375px; */
- bottom: calc(50% - 350px);
+  bottom: calc(50% - 350px);
   left: calc(50% - 350px);
   z-index: -1;
   overflow: clip;
